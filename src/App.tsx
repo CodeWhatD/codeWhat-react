@@ -1,7 +1,8 @@
 import "./App.css";
 import ComponetnExport from "./pages/component-export";
+import Props from "./pages/props";
 function App() {
-  return <ComponetnExport />;
+  return <Props />;
 }
 
 export default App;
