@@ -1,8 +1,7 @@
 import "./App.css";
-import ComponetnExport from "./pages/component-export";
-import Props from "./pages/props";
+import { SimpleState } from "./pages/simpleState";
 function App() {
-  return <Props />;
+  return <SimpleState />;
 }
 
 export default App;
