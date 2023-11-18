@@ -1,7 +1,7 @@
 import "./App.css";
-import { SimpleState } from "./pages/simpleState";
+import { SnapshotState } from "./pages/snapshotState";
 function App() {
-  return <SimpleState />;
+  return <SnapshotState />;
 }
 
 export default App;
