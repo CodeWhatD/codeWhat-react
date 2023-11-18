@@ -1,7 +1,7 @@
 import "./App.css";
-import { SnapshotState } from "./pages/snapshotState";
+import { Immer } from "./pages/Immer";
 function App() {
-  return <SnapshotState />;
+  return <Immer />;
 }
 
 export default App;
