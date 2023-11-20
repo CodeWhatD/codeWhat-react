@@ -1,7 +1,7 @@
 import "./App.css";
-import { Immer } from "./pages/Immer";
+import { Filter } from "./pages/array";
 function App() {
-  return <Immer />;
+  return <Filter />;
 }
 
 export default App;
