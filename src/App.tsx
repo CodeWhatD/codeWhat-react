@@ -1,7 +1,7 @@
 import "./App.css";
-import { Filter } from "./pages/array";
+import { SimpleInput } from "./pages/simpleInput";
 function App() {
-  return <Filter />;
+  return <SimpleInput />;
 }
 
 export default App;
