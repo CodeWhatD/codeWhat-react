@@ -1,7 +1,7 @@
 import "./App.css";
-import { SimpleInput } from "./pages/simpleInput";
+import { Reducer } from "./pages/reducer";
 function App() {
-  return <SimpleInput />;
+  return <Reducer />;
 }
 
 export default App;
