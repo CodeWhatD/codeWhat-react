@@ -1,7 +1,7 @@
 import "./App.css";
-import { Reducer } from "./pages/reducer";
+import { RenderContex } from "./pages/context";
 function App() {
-  return <Reducer />;
+  return <RenderContex />;
 }
 
 export default App;
