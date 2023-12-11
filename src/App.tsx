@@ -1,7 +1,7 @@
 import "./App.css";
-import { Reducer } from "./pages/reducer";
+import { EffectCom } from "./pages/effect";
 function App() {
-  return <Reducer />;
+  return <EffectCom />;
 }
 
 export default App;
