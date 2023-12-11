@@ -12,10 +12,13 @@ const initCount = 0;
 
 export const Reducer = () => {
   const [count, dispatch] = useReducer(reducer, initCount);
+  const [otherCount, otherDispatch] = useReducer(reducer, initCount);
   return (
     <>
-      {count}
-      <button onClick={() => dispatch("add")}>加</button>
+      <div>count:{count}</div>
+      <div>otherCount:{otherCount}</div>
+      <button onClick={() => dispatch("add")}>count加</button>
+      <button onClick={() => otherDispatch("add")}>ohterCount加</button>
     </>
   );
 };
