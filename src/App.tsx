@@ -1,7 +1,7 @@
 import "./App.css";
-import { EffectCom } from "./pages/effect";
+import { ForWardRef } from "./pages/forwardRef";
 function App() {
-  return <EffectCom />;
+  return <ForWardRef />;
 }
 
 export default App;
