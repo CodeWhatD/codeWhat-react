@@ -1,7 +1,16 @@
-import { forwardRef, useRef } from "react";
+import { forwardRef, useRef, useImperativeHandle } from "react";
 
 const MyInput = forwardRef((props, ref: any) => {
-  return <input ref={ref} />;
+  const realRef = useRef(null);
+  // 只对外暴露focus
+  useImperativeHandle(ref, () => {
+    return {
+      focus() {
+        realRef.current.focus();
+      },
+    };
+  });
+  return <input ref={realRef} />;
 });
 
 export const ForWardRef = () => {
