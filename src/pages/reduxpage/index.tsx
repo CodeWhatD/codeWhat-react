@@ -1,12 +1,12 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/useRedux";
 import {
   increment,
   decrement,
   incrementByAmount,
 } from "../../store/features/counter/counterSlice";
 export const ReduxPage = () => {
-  const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.counter.value);
+  const dispatch = useAppDispatch();
   return (
     <div>
       <span>值为：{count}</span>
