@@ -1,7 +1,7 @@
 import "./App.css";
-import { ForWardRef } from "./pages/forwardRef";
+import { ReduxPage } from "./pages/reduxpage";
 function App() {
-  return <ForWardRef />;
+  return <ReduxPage />;
 }
 
 export default App;
