@@ -9,8 +9,9 @@ export const ReduxPage = () => {
   const dispatch = useAppDispatch();
 
   const asyncIncrementAmount = (amount: number) => {
-    return (dispatch: any) => {
+    return (dispatch: any, getState: any) => {
       setTimeout(() => {
+        console.log("store state", getState().counter);
         dispatch(incrementByAmount(amount));
       }, 1000);
     };
@@ -43,7 +44,9 @@ export const ReduxPage = () => {
         onClick={() => {
           dispatch(asyncIncrementAmount(300));
         }}
-      >异步赋值</button>
+      >
+        异步赋值
+      </button>
     </div>
   );
 };
