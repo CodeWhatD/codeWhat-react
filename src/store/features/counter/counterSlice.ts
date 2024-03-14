@@ -25,3 +25,9 @@ export const counterSlice = createSlice({
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
 export default counterSlice.reducer;
+
+
+// 在组件中 可以使用useSelector传到里面获取store中的值，这种写法可以衍生出各种hook封装
+export const getCount = (state: CounterState) => {
+  return state.value;
+};
