@@ -3,7 +3,9 @@ import {
   increment,
   decrement,
   incrementByAmount,
+  getAsyncData,
 } from "../../store/features/counter/counterSlice";
+import { useEffect } from "react";
 export const ReduxPage = () => {
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
@@ -16,6 +18,15 @@ export const ReduxPage = () => {
       }, 1000);
     };
   };
+  useEffect(() => {
+    dispatch(getAsyncData(11))
+      .then((res) => {
+        console.log(res.payload);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  }, []);
   return (
     <div>
       <span>值为：{count}</span>
