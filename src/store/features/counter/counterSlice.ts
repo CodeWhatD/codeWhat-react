@@ -2,6 +2,7 @@ import {
   createSlice,
   type PayloadAction,
   createAsyncThunk,
+  createSelector,
 } from "@reduxjs/toolkit";
 
 interface CounterState {
@@ -62,3 +63,16 @@ export const getAsyncData = createAsyncThunk("counter/getData", (id) => {
     }, 0);
   });
 });
+
+export const selectAllCount = (state: { counter: CounterState }) =>
+  state.counter.value;
+
+export const selectCountByUser = createSelector(
+  [selectAllCount, (_state, userId) => userId],
+  (count, userId) => {
+    return userId > 10 ? count : 20;
+  }
+);
+
+// usage：const needCount = useSelector(state=>selectCountByUser(state,userId))
+// createSelector 是一种提高redux+react性能的工具，对于例子这个来说，只要state,userId不变则会避免一些没用的渲染
