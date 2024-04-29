@@ -12,7 +12,7 @@ export const IconifyPage = () => {
         rotate={139}
         style={{
           color: "#b85656",
-          "font-size": "30px",
+          "fontSize": "30px",
         }}
       ></Icon>
     </div>
