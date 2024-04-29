@@ -1,12 +1,12 @@
 import "./App.css";
 import { Provider } from "react-redux";
 import store from "./store";
-import { IconifyPage } from "./pages/iconify";
+import { PullDown } from "./pages/pulldown";
 function App() {
   return (
     <>
       <Provider store={store}>
-        <IconifyPage />
+        <PullDown />
       </Provider>
     </>
   );
