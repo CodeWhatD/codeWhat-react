@@ -13,6 +13,16 @@ const MyInput = forwardRef((_props, ref: any) => {
   return <input ref={realRef} />;
 });
 
+const OtherCom = (props) => {
+  const { iref } = props;
+  const triggerExternalHandler = () => {
+    iref.current!.focus();
+  };
+  return (
+    <button onClick={() => triggerExternalHandler()}>其它组件去触发</button>
+  );
+};
+
 export const ForWardRef = () => {
   const myinput = useRef<HTMLElement>();
   const handleClick = () => {
@@ -22,6 +32,7 @@ export const ForWardRef = () => {
     <>
       <MyInput ref={myinput} />
       <button onClick={() => handleClick()}>聚焦</button>
+      <OtherCom handler={handleClick} iref={myinput} />
     </>
   );
 };
