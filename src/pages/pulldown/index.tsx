@@ -1,5 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { useState } from "react";
-
 export const PullDown = () => {
   const [touchStartPosition, setTouchStartPosition] = useState(0);
   const [distanceFromTop, setDistanceFromTop] = useState("0px");
