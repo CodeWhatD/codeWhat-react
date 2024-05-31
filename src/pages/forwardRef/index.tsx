@@ -1,6 +1,6 @@
 import { forwardRef, useRef, useImperativeHandle } from "react";
 
-const MyInput = forwardRef((props, ref: any) => {
+const MyInput = forwardRef((_props, ref: any) => {
   const realRef = useRef(null);
   // 只对外暴露focus
   useImperativeHandle(ref, () => {
