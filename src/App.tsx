@@ -1,12 +1,12 @@
 import "./App.css";
 import { Provider } from "react-redux";
 import store from "./store";
-import { ForWardRef } from "./pages/forwardRef";
+import { Responsive } from "./example/responsive";
 function App() {
   return (
     <>
       <Provider store={store}>
-        <ForWardRef />
+        <Responsive />
       </Provider>
     </>
   );
