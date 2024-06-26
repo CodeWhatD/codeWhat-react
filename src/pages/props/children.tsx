@@ -1,20 +1,20 @@
+import { PropsWithChildren, FC } from "react";
 interface ChildProps {
   size: number;
   name: string;
-  children?: any;
 }
-export const Children = function (
-  props: ChildProps = { size: 11, name: "默认值" }
+export const Children: FC<PropsWithChildren<ChildProps>> = function (
+  props = { size: 11, name: "默认值" }
 ) {
-  const { size, name } = props;
+  const { size, name, children } = props;
   return (
     <>
       <h1>子组件学习</h1>
       <span>size为 {size}</span>
       <span>Name为 {name}</span>
-      {props.children.s1(name)}
-      {props.children.s2()}
-      {props.children.s3()}
+      {children.s1(name)}
+      {children.s2()}
+      {children.s3()}
     </>
   );
 };
